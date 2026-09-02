@@ -115,7 +115,7 @@ export default function Home() {
               <Star className="h-4 w-4 fill-[#ef233c] text-[#ef233c]" aria-hidden="true" />
               Brasil mobile RP para Android
             </div>
-            <h1 className="brand-title">Horizonte</h1>
+            <h1 className="text-5xl font-black leading-[0.95] tracking-normal sm:text-7xl lg:text-8xl">Horizonte</h1>
             <p className="mt-5 max-w-xl text-lg font-medium leading-8 text-white/82 sm:text-xl">
               Um jogo de simulacao de vida em um mundo inspirado no Brasil: carros, motos, policia, crime, amizades e missoes direto no seu celular.
             </p>
@@ -187,7 +187,7 @@ export default function Home() {
               <div className="relative rounded-[2.35rem] border-[10px] border-[#16161b] bg-[#16161b] p-2 shadow-[0_30px_90px_rgba(21,16,20,.26),0_0_70px_rgba(239,35,60,.2)]">
                 <div className="absolute left-4 top-1/2 z-10 h-24 w-5 -translate-y-1/2 rounded-full bg-[#0b0b0f]" />
                 <div className="absolute right-4 top-1/2 z-10 h-24 w-5 -translate-y-1/2 rounded-full bg-[#0b0b0f]" />
-                <img src="/horizonte-hero.png" alt="Gameplay horizontal do Horizonte dentro de um celular" className="aspect-[16/8] w-full rounded-[1.65rem] object-cover" />
+                <img src="/gameplay.png" alt="Gameplay do Horizonte dentro de um celular" className="aspect-[16/8] w-full rounded-[1.65rem] object-cover" />
               </div>
             </div>
           )}
@@ -254,4 +254,5 @@ export default function Home() {
     </main>
   );
 }
+
 
