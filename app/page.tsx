@@ -42,7 +42,7 @@ const imageSections = [
     kicker: 'Um mapa unico do Brasil',
     title: 'Ruas, morros, praias e avenidas para viver seu RP.',
     text: 'O Horizonte coloca voce em uma cidade brasileira feita para explorar pelo celular. Encontre pontos de encontro, lojas, oficinas, rotas de missao e paisagens que lembram o dia a dia do Brasil.',
-    image: '/horizonte-hero.png',
+    image: '/horizonte-hero.webp',
     alt: 'Gameplay horizontal do Horizonte em uma avenida brasileira',
   },
   {
@@ -50,7 +50,7 @@ const imageSections = [
     kicker: 'Grande selecao de frota',
     title: 'Carros, motos e garagem com visual de respeito.',
     text: 'Personalize desde a cor ate a altura da suspensao. Dirija, compita, patrulhe, fuja ou apenas apareca com um veiculo que combina com sua historia.',
-    image: '/garage-gameplay.png',
+    image: '/garage-gameplay.webp',
     alt: 'Garagem de customizacao com carro e moto do Horizonte',
   },
   {
@@ -58,7 +58,7 @@ const imageSections = [
     kicker: 'Construa sua carreira',
     title: 'Escolha a lei, o crime ou a vida livre pela cidade.',
     text: 'Entre para a policia, suba de patente, organize operacoes ou siga outro caminho em missoes arriscadas. O RP acontece com outros jogadores, entao cada sessao vira uma historia diferente.',
-    image: '/police-gameplay.png',
+    image: '/police-gameplay.webp',
     alt: 'Cena de carreira policial em uma cidade brasileira no Horizonte',
   },
 ];
@@ -89,7 +89,7 @@ export default function Home() {
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#topo" className="flex items-center" aria-label="Horizonte">
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="Horizonte"
               className="h-14 w-auto max-w-[172px] object-contain drop-shadow-[0_0_22px_rgba(239,35,60,.45)]"
             />
@@ -107,7 +107,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="topo" className="relative min-h-[96vh] bg-[linear-gradient(90deg,rgba(8,8,12,.98)_0%,rgba(8,8,12,.84)_42%,rgba(8,8,12,.36)_100%),url('/horizonte-hero.png')] bg-cover bg-center">
+      <section id="topo" className="relative min-h-[96vh] bg-[linear-gradient(90deg,rgba(8,8,12,.98)_0%,rgba(8,8,12,.84)_42%,rgba(8,8,12,.36)_100%),url('/horizonte-hero.webp')] bg-cover bg-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_21%_31%,rgba(239,35,60,.27),transparent_25%),linear-gradient(180deg,transparent_72%,#0b0b0f_100%)]" />
         <div className="relative z-10 mx-auto flex min-h-[96vh] max-w-7xl items-center px-5 pb-14 pt-28 sm:px-8">
           <div className="max-w-2xl">
@@ -187,7 +187,7 @@ export default function Home() {
               <div className="relative rounded-[2.35rem] border-[10px] border-[#16161b] bg-[#16161b] p-2 shadow-[0_30px_90px_rgba(21,16,20,.26),0_0_70px_rgba(239,35,60,.2)]">
                 <div className="absolute left-4 top-1/2 z-10 h-24 w-5 -translate-y-1/2 rounded-full bg-[#0b0b0f]" />
                 <div className="absolute right-4 top-1/2 z-10 h-24 w-5 -translate-y-1/2 rounded-full bg-[#0b0b0f]" />
-                <img src="/gameplay.png" alt="Gameplay do Horizonte dentro de um celular" className="aspect-[16/8] w-full rounded-[1.65rem] object-cover" />
+                <img src="/gameplay.webp" alt="Gameplay do Horizonte dentro de um celular" className="aspect-[16/8] w-full rounded-[1.65rem] object-cover" />
               </div>
             </div>
           )}
@@ -254,5 +254,6 @@ export default function Home() {
     </main>
   );
 }
+
 
 

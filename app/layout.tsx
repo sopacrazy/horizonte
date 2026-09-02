@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     title: 'Horizonte | Brasil Mobile RP',
     description:
       'Viva um RP mobile inspirado no Brasil com veiculos, carreiras, missoes e amigos online.',
-    images: ['/horizonte-hero.png'],
+    images: ['/horizonte-hero.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Horizonte | Brasil Mobile RP',
     description:
       'Viva um RP mobile inspirado no Brasil com veiculos, carreiras, missoes e amigos online.',
-    images: ['/horizonte-hero.png'],
+    images: ['/horizonte-hero.webp'],
   },
 };
 
@@ -46,3 +46,4 @@ export default function RootLayout({
     </html>
   );
 }
+
