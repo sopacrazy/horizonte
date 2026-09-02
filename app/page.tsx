@@ -36,6 +36,33 @@ const steps = [
   'Crie seu apelido, escolha o servidor e toque em jogar.',
 ];
 
+const imageSections = [
+  {
+    id: 'mapa',
+    kicker: 'Um mapa unico do Brasil',
+    title: 'Ruas, morros, praias e avenidas para viver seu RP.',
+    text: 'O Horizonte coloca voce em uma cidade brasileira feita para explorar pelo celular. Encontre pontos de encontro, lojas, oficinas, rotas de missao e paisagens que lembram o dia a dia do Brasil.',
+    image: '/phone-gameplay.png',
+    alt: 'Gameplay vertical do Horizonte em uma avenida brasileira',
+  },
+  {
+    id: 'veiculos',
+    kicker: 'Grande selecao de frota',
+    title: 'Carros, motos e garagem com visual de respeito.',
+    text: 'Personalize desde a cor ate a altura da suspensao. Dirija, compita, patrulhe, fuja ou apenas apareca com um veiculo que combina com sua historia.',
+    image: '/garage-gameplay.png',
+    alt: 'Garagem de customizacao com carro e moto do Horizonte',
+  },
+  {
+    id: 'carreira',
+    kicker: 'Construa sua carreira',
+    title: 'Escolha a lei, o crime ou a vida livre pela cidade.',
+    text: 'Entre para a policia, suba de patente, organize operacoes ou siga outro caminho em missoes arriscadas. O RP acontece com outros jogadores, entao cada sessao vira uma historia diferente.',
+    image: '/police-gameplay.png',
+    alt: 'Cena de carreira policial em uma cidade brasileira no Horizonte',
+  },
+];
+
 const seoBlocks = [
   {
     title: 'Jogo de carro',
@@ -60,7 +87,7 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-[#0b0b0f] text-white">
       <header className="absolute inset-x-0 top-0 z-20 border-b border-white/10 bg-[#0b0b0f]/48 backdrop-blur-md">
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-          <a href="#topo" className="flex items-center gap-3" aria-label="Horizonte">
+          <a href="#topo" className="flex items-center" aria-label="Horizonte">
             <img
               src="/logo.png"
               alt="Horizonte"
@@ -85,10 +112,10 @@ export default function Home() {
 
       <section
         id="topo"
-        className="relative min-h-[92vh] bg-[linear-gradient(90deg,rgba(8,8,12,.97)_0%,rgba(8,8,12,.82)_38%,rgba(8,8,12,.24)_74%),url('/horizonte-hero.png')] bg-cover bg-center"
+        className="relative min-h-[96vh] bg-[linear-gradient(90deg,rgba(8,8,12,.98)_0%,rgba(8,8,12,.84)_42%,rgba(8,8,12,.36)_100%),url('/horizonte-hero.png')] bg-cover bg-center"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_32%,rgba(239,35,60,.25),transparent_26%),linear-gradient(180deg,transparent_72%,#0b0b0f_100%)]" />
-        <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-7xl items-center px-5 pb-14 pt-28 sm:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_21%_31%,rgba(239,35,60,.27),transparent_25%),linear-gradient(180deg,transparent_72%,#0b0b0f_100%)]" />
+        <div className="relative z-10 mx-auto grid min-h-[96vh] max-w-7xl items-center gap-10 px-5 pb-14 pt-28 sm:px-8 lg:grid-cols-[0.95fr_0.7fr]">
           <div className="max-w-2xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-md border border-white/16 bg-white/8 px-3 py-2 text-xs font-bold uppercase text-[#ffb3bc] backdrop-blur">
               <Star className="h-4 w-4 fill-[#ef233c] text-[#ef233c]" aria-hidden="true" />
@@ -99,17 +126,11 @@ export default function Home() {
               Um jogo de simulacao de vida em um mundo inspirado no Brasil: carros, motos, policia, crime, amizades e missoes direto no seu celular.
             </p>
             <div id="download" className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#como-jogar"
-                className="inline-flex h-14 items-center justify-center gap-3 rounded-md bg-[#ef233c] px-6 text-base font-black uppercase text-white shadow-[0_18px_42px_rgb(239_35_60/34%)] transition hover:-translate-y-0.5 hover:bg-[#ff4056]"
-              >
+              <a href="#como-jogar" className="inline-flex h-14 items-center justify-center gap-3 rounded-md bg-[#ef233c] px-6 text-base font-black uppercase text-white shadow-[0_18px_42px_rgb(239_35_60/34%)] transition hover:-translate-y-0.5 hover:bg-[#ff4056]">
                 Comecar a jogar
                 <ChevronRight className="h-5 w-5" aria-hidden="true" />
               </a>
-              <a
-                href="#comunidade"
-                className="inline-flex h-14 items-center justify-center gap-3 rounded-md border border-white/18 bg-white/10 px-6 text-base font-black uppercase text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/16"
-              >
+              <a href="#comunidade" className="inline-flex h-14 items-center justify-center gap-3 rounded-md border border-white/18 bg-white/10 px-6 text-base font-black uppercase text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/16">
                 <Users className="h-5 w-5" aria-hidden="true" />
                 Entrar na comunidade
               </a>
@@ -125,6 +146,17 @@ export default function Home() {
                   <span className="text-xs font-semibold uppercase text-white/62">{label}</span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="mx-auto hidden w-full max-w-[330px] lg:block">
+            <div className="relative rounded-[3rem] border-[10px] border-[#16161b] bg-[#16161b] p-2 shadow-[0_36px_100px_rgba(0,0,0,.55),0_0_70px_rgba(239,35,60,.22)]">
+              <div className="absolute left-1/2 top-4 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-[#111116]" />
+              <img src="/phone-gameplay.png" alt="Gameplay do Horizonte dentro de um celular" className="aspect-[9/16] w-full rounded-[2.15rem] object-cover" />
+              <div className="absolute bottom-8 left-1/2 flex w-[78%] -translate-x-1/2 items-center justify-between rounded-md border border-white/12 bg-black/58 px-4 py-3 backdrop-blur">
+                <span className="text-xs font-black uppercase text-white">Online agora</span>
+                <span className="rounded-md bg-[#ef233c] px-2 py-1 text-xs font-black text-white">RP</span>
+              </div>
             </div>
           </div>
         </div>
@@ -148,7 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="mapa" className="bg-[#151116] py-20 sm:py-24">
+      <section className="bg-[#151116] py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-5 md:grid-cols-3">
             {featureCards.map((feature) => {
@@ -165,35 +197,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="veiculos" className="bg-[#f3f0ee] py-20 text-[#151014] sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:items-center">
-          <div className="relative overflow-hidden rounded-md">
-            <img src="/horizonte-hero.png" alt="Carros e moto em uma cidade brasileira no jogo Horizonte" className="aspect-[4/3] w-full object-cover" />
-            <div className="absolute bottom-4 left-4 rounded-md bg-[#0b0b0f]/88 px-4 py-3 text-white backdrop-blur">
-              <p className="text-xs font-black uppercase text-[#ffb3bc]">Garagem Horizonte</p>
-              <p className="text-xl font-black">turbine seu estilo</p>
+      {imageSections.map((section, index) => (
+        <section key={section.id} id={section.id} className={index % 2 === 0 ? 'bg-[#f3f0ee] py-20 text-[#151014] sm:py-24' : 'bg-white py-20 text-[#151014] sm:py-24'}>
+          <div className={`mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:items-center ${index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}>
+            <div className="relative overflow-hidden rounded-md shadow-[0_22px_70px_rgba(21,16,20,.18)]">
+              <img src={section.image} alt={section.alt} className="aspect-[16/10] w-full object-cover" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/82 to-transparent p-5 text-white">
+                <p className="text-xs font-black uppercase text-[#ffb3bc]">Horizonte gameplay</p>
+                <p className="mt-1 text-xl font-black">{section.kicker}</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-sm font-black uppercase text-[#c9182d]">{section.kicker}</p>
+              <h2 className="mt-3 text-3xl font-black tracking-normal sm:text-5xl">{section.title}</h2>
+              <p className="mt-5 text-base leading-7 text-[#4d4648]">{section.text}</p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {[
+                  [Wrench, 'Customizacao completa'],
+                  [Smartphone, 'Feito para Android'],
+                  [MessageCircle, 'RP com jogadores reais'],
+                  [Gamepad2, 'Missoes e progresso'],
+                ].map(([Icon, label]) => (
+                  <div key={label as string} className="flex items-center gap-3 rounded-md border border-[#ded4d4] bg-white p-4">
+                    <Icon className="h-5 w-5 text-[#c9182d]" aria-hidden="true" />
+                    <span className="text-sm font-bold">{label as string}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <div>
-            <p className="text-sm font-black uppercase text-[#c9182d]">Grande selecao de frota</p>
-            <h2 className="mt-3 text-3xl font-black tracking-normal sm:text-5xl">Carros, motos e viaturas para dominar a cidade.</h2>
-            <p className="mt-5 text-base leading-7 text-[#4d4648]">Personalize desde a cor ate a altura da suspensao. O Horizonte e feito para quem quer dirigir, competir, patrulhar, fugir, passear e mostrar presenca em cada esquina.</p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                [Wrench, 'Customizacao visual e mecanica'],
-                [Smartphone, 'Feito para Android'],
-                [MessageCircle, 'RP com outros jogadores'],
-                [Gamepad2, 'Missoes e progressao'],
-              ].map(([Icon, label]) => (
-                <div key={label as string} className="flex items-center gap-3 rounded-md border border-[#ded4d4] bg-white p-4">
-                  <Icon className="h-5 w-5 text-[#c9182d]" aria-hidden="true" />
-                  <span className="text-sm font-bold">{label as string}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       <section className="bg-white py-20 text-[#151014] sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
