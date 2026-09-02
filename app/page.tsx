@@ -42,8 +42,8 @@ const imageSections = [
     kicker: 'Um mapa unico do Brasil',
     title: 'Ruas, morros, praias e avenidas para viver seu RP.',
     text: 'O Horizonte coloca voce em uma cidade brasileira feita para explorar pelo celular. Encontre pontos de encontro, lojas, oficinas, rotas de missao e paisagens que lembram o dia a dia do Brasil.',
-    image: '/phone-gameplay.png',
-    alt: 'Gameplay vertical do Horizonte em uma avenida brasileira',
+    image: '/horizonte-hero.png',
+    alt: 'Gameplay horizontal do Horizonte em uma avenida brasileira',
   },
   {
     id: 'veiculos',
@@ -100,22 +100,16 @@ export default function Home() {
             <a href="#veiculos" className="transition hover:text-white">Veiculos</a>
             <a href="#comunidade" className="transition hover:text-white">Comunidade</a>
           </div>
-          <a
-            href="#download"
-            className="inline-flex h-11 items-center gap-2 rounded-md bg-[#ef233c] px-4 text-sm font-black uppercase text-white shadow-[0_12px_30px_rgb(239_35_60/30%)] transition hover:-translate-y-0.5 hover:bg-[#ff4056]"
-          >
+          <a href="#download" className="inline-flex h-11 items-center gap-2 rounded-md bg-[#ef233c] px-4 text-sm font-black uppercase text-white shadow-[0_12px_30px_rgb(239_35_60/30%)] transition hover:-translate-y-0.5 hover:bg-[#ff4056]">
             <Download className="h-4 w-4" aria-hidden="true" />
             Baixar
           </a>
         </nav>
       </header>
 
-      <section
-        id="topo"
-        className="relative min-h-[96vh] bg-[linear-gradient(90deg,rgba(8,8,12,.98)_0%,rgba(8,8,12,.84)_42%,rgba(8,8,12,.36)_100%),url('/horizonte-hero.png')] bg-cover bg-center"
-      >
+      <section id="topo" className="relative min-h-[96vh] bg-[linear-gradient(90deg,rgba(8,8,12,.98)_0%,rgba(8,8,12,.84)_42%,rgba(8,8,12,.36)_100%),url('/horizonte-hero.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_21%_31%,rgba(239,35,60,.27),transparent_25%),linear-gradient(180deg,transparent_72%,#0b0b0f_100%)]" />
-        <div className="relative z-10 mx-auto grid min-h-[96vh] max-w-7xl items-center gap-10 px-5 pb-14 pt-28 sm:px-8 lg:grid-cols-[0.95fr_0.7fr]">
+        <div className="relative z-10 mx-auto flex min-h-[96vh] max-w-7xl items-center px-5 pb-14 pt-28 sm:px-8">
           <div className="max-w-2xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-md border border-white/16 bg-white/8 px-3 py-2 text-xs font-bold uppercase text-[#ffb3bc] backdrop-blur">
               <Star className="h-4 w-4 fill-[#ef233c] text-[#ef233c]" aria-hidden="true" />
@@ -146,17 +140,6 @@ export default function Home() {
                   <span className="text-xs font-semibold uppercase text-white/62">{label}</span>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="mx-auto hidden w-full max-w-[330px] lg:block">
-            <div className="relative rounded-[3rem] border-[10px] border-[#16161b] bg-[#16161b] p-2 shadow-[0_36px_100px_rgba(0,0,0,.55),0_0_70px_rgba(239,35,60,.22)]">
-              <div className="absolute left-1/2 top-4 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-[#111116]" />
-              <img src="/phone-gameplay.png" alt="Gameplay do Horizonte dentro de um celular" className="aspect-[9/16] w-full rounded-[2.15rem] object-cover" />
-              <div className="absolute bottom-8 left-1/2 flex w-[78%] -translate-x-1/2 items-center justify-between rounded-md border border-white/12 bg-black/58 px-4 py-3 backdrop-blur">
-                <span className="text-xs font-black uppercase text-white">Online agora</span>
-                <span className="rounded-md bg-[#ef233c] px-2 py-1 text-xs font-black text-white">RP</span>
-              </div>
             </div>
           </div>
         </div>
@@ -199,6 +182,15 @@ export default function Home() {
 
       {imageSections.map((section, index) => (
         <section key={section.id} id={section.id} className={index % 2 === 0 ? 'bg-[#f3f0ee] py-20 text-[#151014] sm:py-24' : 'bg-white py-20 text-[#151014] sm:py-24'}>
+          {index === 0 && (
+            <div className="mx-auto mb-14 max-w-5xl px-5 sm:px-8">
+              <div className="relative rounded-[2.35rem] border-[10px] border-[#16161b] bg-[#16161b] p-2 shadow-[0_30px_90px_rgba(21,16,20,.26),0_0_70px_rgba(239,35,60,.2)]">
+                <div className="absolute left-4 top-1/2 z-10 h-24 w-5 -translate-y-1/2 rounded-full bg-[#0b0b0f]" />
+                <div className="absolute right-4 top-1/2 z-10 h-24 w-5 -translate-y-1/2 rounded-full bg-[#0b0b0f]" />
+                <img src="/horizonte-hero.png" alt="Gameplay horizontal do Horizonte dentro de um celular" className="aspect-[16/8] w-full rounded-[1.65rem] object-cover" />
+              </div>
+            </div>
+          )}
           <div className={`mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:items-center ${index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}>
             <div className="relative overflow-hidden rounded-md shadow-[0_22px_70px_rgba(21,16,20,.18)]">
               <img src={section.image} alt={section.alt} className="aspect-[16/10] w-full object-cover" />
