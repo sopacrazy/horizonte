@@ -115,7 +115,7 @@ export default function Home() {
               <Star className="h-4 w-4 fill-[#ef233c] text-[#ef233c]" aria-hidden="true" />
               Brasil mobile RP para Android
             </div>
-            <h1 className="text-5xl font-black leading-[0.95] tracking-normal sm:text-7xl lg:text-8xl">Horizonte</h1>
+            <h1 className="brand-title">Horizonte</h1>
             <p className="mt-5 max-w-xl text-lg font-medium leading-8 text-white/82 sm:text-xl">
               Um jogo de simulacao de vida em um mundo inspirado no Brasil: carros, motos, policia, crime, amizades e missoes direto no seu celular.
             </p>
@@ -254,3 +254,4 @@ export default function Home() {
     </main>
   );
 }
+
